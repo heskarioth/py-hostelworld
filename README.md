@@ -38,6 +38,17 @@ hw.get__hostel_by_city_name('Hanoi')
 ```
 ![HostelByCityName](imgs/get__hostel_by_city_name.PNG)
 
+Sometimes countries like name their cities with city names already present in other countries. 
+```python
+hw.get__hostel_by_city_name_multiple_locations('Westport')
+```
+![HostelByCityNameMultipleLocationsMultipleCountries](imgs/get__hostel_by_city_name_multiple_locations.PNG)
+
+But what if we only want to see the results in Ireland?
+```python
+hw.get__hostel_by_city_name_multiple_locations('Westport','Ireland')
+```
+![HostelByCityNameMultipleLocationsSingleCountry](imgs/get__hostel_by_city_name_multiple_locations.PNG)
 
 ## Features
 List of features ready and TODOs for future development
@@ -48,6 +59,7 @@ To-do list:
 * Check hostels' availability given defined timeframe
 * Get hostels' reviews
 * Upload package to pypi.org
+* Store places id in mongodb file (currently saved in csv).
 
 ## Status
 Project is: _in progress_
