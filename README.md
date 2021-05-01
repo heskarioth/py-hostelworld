@@ -30,13 +30,13 @@ Show me all the hostels in South Africa
 ```python
 hw.get_hostel_by_country_name('South Africa')
 ```
-![HostelByCountryName](imgs/get_hostel_by_country_name.png)
+![HostelByCountryName](imgs/get_hostel_by_country_name.PNG)
 
 Show me all the hostels in Hanoi
 ```python
 hw.get__hostel_by_city_name('Hanoi')
 ```
-![HostelByCityName](imgs/get__hostel_by_city_name.png)
+![HostelByCityName](imgs/get__hostel_by_city_name.PNG)
 
 
 ## Features
