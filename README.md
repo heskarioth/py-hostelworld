@@ -69,6 +69,7 @@ To-do list:
 * Upload package to pypi.org
 * create swagger endpoints
 * Store places id in mongodb file (currently saved in csv).
+* Replace requests with sessions and Retry objects.
 
 ## Status
 Project is: _in progress_
