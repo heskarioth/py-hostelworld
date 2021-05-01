@@ -1,6 +1,8 @@
-
+import pandas as pd
 import numpy as np
 from hostelworld_utils import json_parser
+import requests 
+
 
 class Hostelworld:
     
@@ -39,7 +41,7 @@ class Hostelworld:
             print(' {} hostels found in {}.'.format(len(data['properties']),city_name))
             self.last_city = json_parser(data)
             self.search_history_values.append(self.last_city)
-            self.search_history.append(' get__hostel_by_city_name()## Searched for {} . Number results: {}'.format(city_name,complete_df.shape[0]))
+            self.search_history.append(' get__hostel_by_city_name()## Searched for {} . Number results: {}'.format(city_name,self.last_city.shape[0]))
             return self.last_city
         
         elif len(real_ids)==0:
