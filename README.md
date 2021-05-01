@@ -71,9 +71,10 @@ List of features ready and TODOs for future development
 * get__hostel_by_city_name
 * get__hostel_by_city_name_multiple_locations
 * get_hostel_review_by_hostel_id
+* get_hostel_availability_by_hostel_id_date
 
 To-do list:
-* ~~Check hostels' availability given defined timeframe
+* ~~Check hostels' availability given defined timeframe~~
 * ~~Get hostels' reviews~~ Include, city_name, country_name, hostel_name, hostel_id in response dataframe
 * Upload package to pypi.org
 * create swagger endpoints
