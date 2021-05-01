@@ -19,7 +19,7 @@ The code is written in python comprinsing a collection of REST calls.
 
 ## Setup
 - After cloning the repo. pip install the requirements.txt.
-- Following the above changes, you can execute the script via terminal: python main.py
+- Following the above changes, you can execute the script via terminal: python hostelworld.py
 
 ## Usage Examples
 Instantiate the class
