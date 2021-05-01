@@ -1,5 +1,5 @@
 # py-hostelworld
-> Unofficial hostelworld API created using REST endpoints and some creativity.
+> Unofficial hostelworld API created using Hostelworld.com enpoints.
 
 ## Table of contents
 * [General info](#general-info)
