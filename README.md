@@ -41,14 +41,14 @@ hw.get__hostel_by_city_name('Hanoi')
 
 ## Features
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* get_hostel_by_country_name
+* get__hostel_by_city_name
+
 
 To-do list:
-* Search Hostels per
-* Check availability per hostels defined city
-* Update package to pypi.org
+* Check hostels' availability given defined timeframe
+* Get hostels' reviews
+* Upload package to pypi.org
 
 ## Status
 Project is: _in progress_
