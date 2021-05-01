@@ -42,13 +42,13 @@ Sometimes countries like name their cities with city names already present in ot
 ```python
 hw.get__hostel_by_city_name_multiple_locations('Westport')
 ```
-![HostelByCityNameMultipleLocationsMultipleCountries](imgs/get__hostel_by_city_name_multiple_locations.PNG)
+![HostelByCityNameMultipleLocationsMultipleCountries](imgs/HostelByCityNameMultipleLocationsMultipleCountries.PNG)
 
 But what if we only want to see the results in Ireland?
 ```python
 hw.get__hostel_by_city_name_multiple_locations('Westport','Ireland')
 ```
-![HostelByCityNameMultipleLocationsSingleCountry](imgs/get__hostel_by_city_name_multiple_locations.PNG)
+![HostelByCityNameMultipleLocationsSingleCountry](imgs/HostelByCityNameMultipleLocationsSingleCountry.PNG)
 
 ## Features
 List of features ready and TODOs for future development
