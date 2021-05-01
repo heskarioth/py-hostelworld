@@ -61,6 +61,7 @@ List of features ready and TODOs for future development
 * get_hostel_by_country_name
 * get__hostel_by_city_name
 * get__hostel_by_city_name_multiple_locations
+* get_hostel_review_by_hostel_id
 
 To-do list:
 * Check hostels' availability given defined timeframe
