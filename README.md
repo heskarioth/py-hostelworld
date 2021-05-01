@@ -54,6 +54,7 @@ hw.get__hostel_by_city_name_multiple_locations('Westport','Ireland')
 List of features ready and TODOs for future development
 * get_hostel_by_country_name
 * get__hostel_by_city_name
+* get__hostel_by_city_name_multiple_locations
 
 To-do list:
 * Check hostels' availability given defined timeframe
