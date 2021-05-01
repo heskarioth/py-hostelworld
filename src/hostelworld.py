@@ -144,7 +144,42 @@ class Hostelworld:
     
     
     
-    
+    def get_hostel_availability_by_hostel_id_date(self,hostel_id,start_date,n_nights=1,currency='GBP'):
+        
+        url = 'https://api.m.hostelworld.com/2.2/properties/{}/availability/?guests=2&num-nights={}&date-start={}&show-rate-restrictions=true&application=web&currency={}'.format(hostel_id,n_nights,start_date,currency)
+        r = requests.get(url)
+        data = r.json()
+        if r.status_code==400:
+            return print(data['description'][0]['message'])
+        is_dorms = False if len(data['rooms']['dorms'])==0 else True
+        is_privates= False if len(data['rooms']['privates'])==0 else True
+        dorm_room_details = {}
+        if is_dorms & is_privates:
+            for key in data['rooms'].keys():    
+                base = data['rooms'][key]
+                for idx in range(len(base)):    
+                    dorm_str = '{}_{}'.format(key,base[idx]['name'])
+                    dorm_room_details[dorm_str+'__totalBedsAvailable'] = base[idx]['totalBedsAvailable']
+                    dorm_room_details[dorm_str+'__totalRoomsAvailable'] = base[idx]['totalRoomsAvailable']
+                    dorm_room_details[dorm_str+'__single_night_price'] = base[idx]['priceBreakdown'][0]['price']['value']
+                    dorm_room_details[dorm_str+'__tot_price'] = base[idx]['totalPrice'][0]['price']['value']
+
+            dorm_room_details['hostel_id'] = hostel_id
+            dorm_room_details['lowestDormPricePerNight'] =  data['lowestDormPricePerNight']['value']
+            dorm_room_details['lowestPricePerNight'] =  data['lowestPricePerNight']['value']
+            dorm_room_details['lowestPrivatePricePerNight'] =  data['lowestPrivatePricePerNight']['value']
+            dorm_room_details['lowestDormPricePerNight'] =  data['lowestDormPricePerNight']['value']
+            dorm_room_details['lowestAveragePricePerNight'] =  data['lowestAveragePricePerNight']['value']
+            dorm_room_details['lowestAverageDormPricePerNight'] =  data['lowestAverageDormPricePerNight']['value']
+            dorm_room_details['lowestAveragePrivatePricePerNight'] =  data['lowestAveragePrivatePricePerNight']['value']
+
+            df_availability = pd.DataFrame(dorm_room_details,index=[0])
+            self.search_history.append('get_hostel_availability_by_hostel_id_date()## Searched availability for Hostel ID:{} on {} date, with a stay of {} days.'.format(hostel_id,start_date,n_nights))
+            
+            self.search_history_values.append(df_availability)
+            return df_availability   
+        print('No available dorms/private rooms for given date.')
+
     
     
     def _describe_last_city(self):
