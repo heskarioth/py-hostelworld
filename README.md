@@ -50,6 +50,12 @@ hw.get__hostel_by_city_name_multiple_locations('Westport','Ireland')
 ```
 ![HostelByCityNameMultipleLocationsSingleCountry](imgs/HostelByCityNameMultipleLocationsSingleCountry.PNG)
 
+If we want to check out reviews for a single hostel we have to insert the hostel_id that we get from any of the previous methods
+```python
+hw.get_hostel_review_by_hostel_id(100962)
+```
+![GetHostelReviewsById](imgs/get_hostel_review_by_hostel_id.PNG)
+
 ## Features
 List of features ready and TODOs for future development
 * get_hostel_by_country_name
@@ -58,7 +64,7 @@ List of features ready and TODOs for future development
 
 To-do list:
 * Check hostels' availability given defined timeframe
-* Get hostels' reviews
+* ~~Get hostels' reviews~~ Include, city_name, country_name, hostel_name, hostel_id in response dataframe
 * Upload package to pypi.org
 * create swagger endpoints
 * Store places id in mongodb file (currently saved in csv).
