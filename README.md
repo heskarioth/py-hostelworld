@@ -60,6 +60,7 @@ To-do list:
 * Check hostels' availability given defined timeframe
 * Get hostels' reviews
 * Upload package to pypi.org
+* create swagger endpoints
 * Store places id in mongodb file (currently saved in csv).
 
 ## Status
