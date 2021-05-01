@@ -76,5 +76,5 @@ class Hostelworld:
     
 if __name__ == "__main__":
     hw = Hostelworld()
-    print(hw.get__hostel_by_city_name('Acireale').shape)
-    print(hw.search_history)
+    #print(hw.get__hostel_by_city_name('Acireale').shape)
+    #print(hw.search_history)
