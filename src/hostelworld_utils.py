@@ -75,3 +75,56 @@ def json_parser(data):
         complete_df = pd.concat([complete_df,pd.DataFrame(tmp_dict,index=[0])])
         complete_df = complete_df.fillna(0)
     return complete_df
+
+
+def parse_review_apiurl(data):
+    n_reviews_current_page = len(data['reviews'])
+    df_reviews = pd.DataFrame()
+    for idx in range(n_reviews_current_page):
+        base = data['reviews'][idx]
+        tmp_dict = {
+         'review_id' : base['id']
+         ,'date_stay':base['date']
+         ,'notes':base['notes']
+         #,'ownerComment':base['ownerComment']
+         ,'disliked':base['disliked']
+         ,'liked':base['liked']
+         #,'groupInformation_age':base['groupInformation']['age']
+         #,'groupInformation_groupTypeCode':base['groupInformation']['groupTypeCode']
+         ,'groupInformation_tripTypeCodes':base['groupInformation']['tripTypeCodes']
+         ,'rating_atmosphere':base['rating']['atmosphere']
+         ,'rating_cleanliness':base['rating']['cleanliness']
+         ,'rating_facilities':base['rating']['facilities']
+         ,'rating_location':base['rating']['location']
+         ,'rating_overall':base['rating']['overall']
+         ,'rating_safety':base['rating']['safety']
+         ,'rating_staff':base['rating']['staff']
+         ,'rating_value':base['rating']['value']
+         ,'recommended':base['recommended']
+        }
+        df_reviews = pd.concat([df_reviews,pd.DataFrame(tmp_dict,index=[0])])
+    return df_reviews
+
+def parse_review_get_request(data):
+    n_reviews_current_page = len(data['reviews'])
+    df_reviews = pd.DataFrame()
+    for idx in range(n_reviews_current_page):
+        base = data['reviews'][idx]
+        tmp_dict = {
+         'review_id' : base['id']
+         #,'notes':base['notes']
+         ,'ownerReply':base['ownerReply']
+         ,'reviewer_ageGroup': base['reviewer']['ageGroup']
+         ,'reviewer_gender': base['reviewer']['gender']
+         ,'reviewer_id': base['reviewer']['id']
+         ,'reviewer_nationality' : base['reviewer']['nationality']
+         ,'reviewer_rank': base['reviewer']['rank']
+         ,'reviewer_totalReviews':base['reviewer']['totalReviews']
+         ,'reviewer_username':base['reviewer']['username']
+         ,'summary_keyword': base['summary']['keyword']
+         ,'summary_overall': base['summary']['overall']
+         ,'summary_status': base['summary']['status']
+         #,'summary_stayed': base['summary']['stayed']
+        }
+        df_reviews = pd.concat([df_reviews,pd.DataFrame(tmp_dict,index=[0])])
+    return df_reviews
