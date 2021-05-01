@@ -38,7 +38,7 @@ hw.get__hostel_by_city_name('Hanoi')
 ```
 ![HostelByCityName](imgs/get__hostel_by_city_name.PNG)
 
-Sometimes countries like name their cities with city names already present in other countries. 
+Sometimes countries like to name their cities with city names already present in other countries. 
 ```python
 hw.get__hostel_by_city_name_multiple_locations('Westport')
 ```
