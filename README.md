@@ -80,6 +80,7 @@ To-do list:
 * create swagger endpoints
 * Store places id in mongodb file (currently saved in csv).
 * Replace requests with sessions and Retry objects.
+* Introduce multithreading
 
 ## Status
 Project is: _in progress_
