@@ -64,6 +64,7 @@ n_nights=10 #max value 30
 hw.get_hostel_availability_by_hostel_id_date(hostel_id,start_date,n_nights).T
 ```
 ![GetHostelAvailabilityByIdDate](imgs/get_hostel_availability_by_hostel_id_date.PNG)
+Standard 10 bedroom mixed dorm seems to be the cheapest place for staying. And how much is that going to cost us for 10 nights? Roughly, 39.63
 
 ## Features
 List of features ready and TODOs for future development
